@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelGrow | High-Performance Meta Ads Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lilac: '#E0C3FC',
+                            purple: '#8EC5FC',
+                            deepPurple: '#7C3AED',
+                            accent: '#A855F7',
+                            dark: '#0B0813',
+                            cardDark: '#151022',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-dark text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-deepPurple via-purple-500 to-brand-lilac flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-purple-900/40 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-white">
+                    Pixel<span class="bg-gradient-to-r from-brand-lilac to-purple-400 bg-clip-text text-transparent">Grow</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-300 text-sm">
+                <a href="#services" class="hover:text-brand-lilac transition-colors">Services</a>
+                <a href="#case-studies" class="hover:text-brand-lilac transition-colors">Case Studies</a>
+                <a href="#simulator" class="hover:text-brand-lilac transition-colors">Ad Simulator</a>
+                <a href="#contact" class="hover:text-brand-lilac transition-colors">Contact</a>
+                <a href="#calculator" class="hover:text-brand-lilac transition-colors">ROI Calculator</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-deepPurple to-brand-accent hover:opacity-90 text-white font-semibold text-sm shadow-lg shadow-purple-900/30 transition-all hover:-translate-y-0.5">
+                    Get Free Ad Audit
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-300 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-cardDark border-b border-purple-900/40 px-6 py-4 flex flex-col gap-4 text-slate-300">
+            <a href="#services" class="hover:text-brand-lilac py-2 border-b border-white/5">Services</a>
+            <a href="#case-studies" class="hover:text-brand-lilac py-2 border-b border-white/5">Case Studies</a>
+            <a href="#simulator" class="hover:text-brand-lilac py-2 border-b border-white/5">Ad Simulator</a>
+            <a href="#calculator" class="hover:text-brand-lilac py-2 border-b border-white/5">ROI Calculator</a>
+            <a href="#audit-form" class="mt-2 w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-deepPurple to-brand-accent text-white font-semibold">Get Free Ad Audit</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <!-- Background Radial Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 left-10 w-72 h-72 bg-brand-lilac/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-brand-lilac text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Meta Ads Agency For E-Commerce & Real Estate
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.15] max-w-5xl mx-auto">
+                Scale Your Revenue With <br class="hidden sm:inline"/>
+                <span class="bg-gradient-to-r from-white via-brand-lilac to-purple-400 bg-clip-text text-transparent">Hyper Targeted Meta Ads</span>
+            </h1>
+
+            <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-normal">
+                We engineer profitable Facebook & Instagram ad campaigns that drive consistent sales for E-Commerce brands and qualified buyer leads for Real Estate businesses.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#audit-form" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-deepPurple via-purple-600 to-brand-accent hover:shadow-purple-500/25 hover:shadow-2xl text-white font-bold text-base shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2">
+                    Claim Free Growth Strategy <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#case-studies" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-slate-200 font-semibold text-base transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2">
+                    View Live Results <i class="fa-solid fa-play text-xs text-brand-lilac"></i>
+                </a>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white">$2.4M+</h3>
+                    <p class="text-xs md:text-sm text-slate-400 mt-1">Ad Spend Managed</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-brand-lilac">6.8x</h3>
+                    <p class="text-xs md:text-sm text-slate-400 mt-1">Average E-com ROAS</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white">12,500+</h3>
+                    <p class="text-xs md:text-sm text-slate-400 mt-1">Real Estate Leads Generated</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-purple-400">98%</h3>
+                    <p class="text-xs md:text-sm text-slate-400 mt-1">Client Retention Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+<section id="services" class="py-20 relative bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brand-lilac text-xs font-bold uppercase tracking-widest">Our Expertise</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">Services Built to Scale Your Revenue</h2>
+            <p class="text-slate-400 mt-4">We specialize in end-to-end Meta advertising solutions engineered specifically for high growth.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-brand-cardDark border border-purple-900/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-brand-lilac text-xl mb-6">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">E-Commerce Scaling</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Full-funnel Meta ad campaigns, dynamic product catalog ads, high-converting UGC creative testing, and retargeting systems to boost your ROAS.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-brand-cardDark border border-purple-900/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-brand-lilac text-xl mb-6">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Real Estate Lead Generation</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Hyper-targeted local campaigns and qualified Instant Lead Forms designed to deliver serious property buyers directly to your sales team.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-brand-cardDark border border-purple-900/30 rounded-2xl p-8 hover:border-purple-500/50 transition-all">
+                <div class="w-12 h-12 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-brand-lilac text-xl mb-6">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Ad Creative & Copywriting</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Scroll-stopping image and video creatives paired with direct-response ad copy tailored specifically to beat ad fatigue and lower CPL.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CASE STUDIES / REAL RESULTS SECTION -->
+    <section id="case-studies" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-lilac text-xs font-bold uppercase tracking-widest">Proven Performance</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">Authentic Client Results</h2>
+                </div>
+                <!-- Filter Buttons -->
+                <div class="flex items-center gap-2 mt-6 md:mt-0 bg-brand-cardDark p-1.5 rounded-xl border border-white/10">
+                    <button class="filter-btn active px-4 py-2 rounded-lg text-xs font-semibold transition-all" data-filter="all">All Projects</button>
+                    <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-filter="ecom">E-Commerce</button>
+                    <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all" data-filter="realestate">Real Estate</button>
+                </div>
+            </div>
+
+            <!-- Case Studies Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 (Ecom) -->
+                <div class="case-card ecom bg-brand-cardDark border border-purple-900/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-900/40 text-brand-lilac text-xs font-semibold border border-purple-500/20">E-Commerce Apparel</span>
+                        <span class="text-green-400 text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-arrow-trend-up"></i> +412% Revenue</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-lilac transition-colors">UrbanWear Co.</h3>
+                    <p class="text-slate-400 text-sm mt-2">Scaled from $15k/mo to $85k/mo in under 90 days using dynamic creative testing and Lookalike audiences.</p>
+                    
+                    <div class="my-6 p-4 rounded-xl bg-black/40 border border-white/5 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <span class="block text-xs text-slate-400">Ad Spend</span>
+                            <span class="text-lg font-bold text-white">$12,400</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">Return (ROAS)</span>
+                            <span class="text-lg font-bold text-brand-lilac">8.4x</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('UrbanWear Co.', 'E-Commerce Apparel', '8.4x ROAS', '$104,160', 'Scaled UGC video ads combined with advantage+ shopping campaigns on Meta to target high-intent streetwear buyers.')" class="w-full py-2.5 rounded-xl border border-white/10 hover:bg-white/10 text-xs font-semibold text-slate-200 transition-all">
+                        View Breakdown
+                    </button>
+                </div>
+
+                <!-- Card 2 (Real Estate) -->
+                <div class="case-card realestate bg-brand-cardDark border border-purple-900/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-900/40 text-brand-lilac text-xs font-semibold border border-purple-500/20">Luxury Real Estate</span>
+                        <span class="text-green-400 text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-arrow-trend-up"></i> $4.2M Property Sales</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-lilac transition-colors">Aura Luxury Villas</h3>
+                    <p class="text-slate-400 text-sm mt-2">Generated high-net-worth investor leads for high-end luxury penthouses and seaside villas.</p>
+                    
+                    <div class="my-6 p-4 rounded-xl bg-black/40 border border-white/5 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <span class="block text-xs text-slate-400">Cost Per Lead</span>
+                            <span class="text-lg font-bold text-white">$14.20</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">Qualified Buyers</span>
+                            <span class="text-lg font-bold text-brand-lilac">340+ Leads</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Aura Luxury Villas', 'Luxury Real Estate', '$14.20 CPL', '340+ Qualified Leads', 'Used interactive Meta Lead Forms with custom qualification questions to filter out unqualified buyers and deliver ready-to-buy clients to the sales team.')" class="w-full py-2.5 rounded-xl border border-white/10 hover:bg-white/10 text-xs font-semibold text-slate-200 transition-all">
+                        View Breakdown
+                    </button>
+                </div>
+
+                <!-- Card 3 (Ecom) -->
+                <div class="case-card ecom bg-brand-cardDark border border-purple-900/30 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-900/40 text-brand-lilac text-xs font-semibold border border-purple-500/20">Skincare & Beauty</span>
+                        <span class="text-green-400 text-xs font-bold flex items-center gap-1"><i class="fa-solid fa-arrow-trend-up"></i> 5.2x ROAS</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-brand-lilac transition-colors">GlowSkin Botanicals</h3>
+                    <p class="text-slate-400 text-sm mt-2">Decreased acquisition costs by 38% through hook testing and dynamic catalog remarketing.</p>
+                    
+                    <div class="my-6 p-4 rounded-xl bg-black/40 border border-white/5 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <span class="block text-xs text-slate-400">Ad Spend</span>
+                            <span class="text-lg font-bold text-white">$28,000</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">Tracked Sales</span>
+                            <span class="text-lg font-bold text-brand-lilac">$145,600</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('GlowSkin Botanicals', 'Skincare & Beauty', '5.2x ROAS', '$145,600', 'Optimized creative hooks and deployed angle-based messaging for different age demographics on Instagram Stories and Reels.')" class="w-full py-2.5 rounded-xl border border-white/10 hover:bg-white/10 text-xs font-semibold text-slate-200 transition-all">
+                        View Breakdown
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE AD SIMULATOR / DEMO CREATIVES -->
+    <section id="simulator" class="py-20 bg-black/40 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-lilac text-xs font-bold uppercase tracking-widest">Interactive Preview</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">High-Converting Ad Simulator</h2>
+                <p class="text-slate-400 mt-4">Preview the exact style of high-converting Meta Ad creatives we design for our clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Controls -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-brand-cardDark p-6 rounded-2xl border border-purple-900/30">
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Select Industry</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="sim-btn-ecom" class="sim-type-btn active py-3 px-4 rounded-xl border border-purple-500/50 bg-purple-900/30 text-white font-semibold text-sm flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-bag-shopping text-brand-lilac"></i> E-Commerce
+                            </button>
+                            <button id="sim-btn-re" class="sim-type-btn py-3 px-4 rounded-xl border border-white/10 bg-black/20 text-slate-400 font-semibold text-sm flex items-center justify-center gap-2 hover:text-white">
+                                <i class="fa-solid fa-building text-purple-400"></i> Real Estate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-cardDark p-6 rounded-2xl border border-purple-900/30 space-y-4">
+                        <h4 class="font-bold text-white text-base">Key Ad Elements Included:</h4>
+                        <div class="flex items-start gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-circle-check text-green-400 mt-1"></i>
+                            <span>Scroll-stopping visual hook engineered for high CTR</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-circle-check text-green-400 mt-1"></i>
+                            <span>Direct response benefit-driven ad copy framework</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm text-slate-300">
+                            <i class="fa-solid fa-circle-check text-green-400 mt-1"></i>
+                            <span>Instant lead form / One-click checkout integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Mockup Preview -->
+                <div class="lg:col-span-7 flex justify-center">
+                    <div class="w-full max-w-sm bg-black rounded-[35px] p-4 border-4 border-slate-800 shadow-2xl shadow-purple-950/50">
+                        <!-- Simulated Instagram Header -->
+                        <div class="flex items-center justify-between pb-3 px-2 border-b border-white/10">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-deepPurple to-brand-lilac flex items-center justify-center text-xs font-bold text-white">PG</div>
+                                <div>
+                                    <h5 id="sim-brand-name" class="text-xs font-bold text-white">LuxeAura Official</h5>
+                                    <p class="text-[10px] text-slate-400">Sponsored • <i class="fa-solid fa-earth-americas"></i></p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis text-slate-400 text-sm"></i>
+                        </div>
+
+                        <!-- Simulated Visual Media -->
+                        <div class="relative my-3 rounded-xl overflow-hidden aspect-square bg-slate-900 flex items-center justify-center group">
+                            <img id="sim-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80" alt="Ad Preview" class="w-full h-full object-cover">
+                            <div id="sim-badge" class="absolute top-3 right-3 px-3 py-1 rounded-full bg-brand-deepPurple/90 text-white text-[10px] font-bold backdrop-blur-md">
+                                40% OFF TODAY
+                            </div>
+                        </div>
+
+                        <!-- Simulated Ad Actions -->
+                        <div class="flex justify-between items-center px-1 mb-2">
+                            <div class="flex gap-3 text-slate-200 text-base">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <i class="fa-regular fa-bookmark text-slate-200 text-base"></i>
+                        </div>
+
+                        <!-- Simulated Headline & Copy -->
+                        <div class="px-1 text-xs space-y-1">
+                            <p id="sim-headline" class="font-bold text-white text-sm">Upgrade Your Daily Wear Essentials</p>
+                            <p id="sim-copy" class="text-slate-300 line-clamp-2">Experience premium comfort engineered for modern life. Free worldwide shipping on orders over $50.</p>
+                        </div>
+
+                        <!-- CTA Bar -->
+                        <div class="mt-4 p-2.5 rounded-xl bg-purple-900/40 border border-purple-500/30 flex justify-between items-center">
+                            <span id="sim-cta-text" class="text-xs font-bold text-brand-lilac">Shop Now & Save</span>
+                            <span class="px-3 py-1 rounded-lg bg-brand-deepPurple text-white text-xs font-bold">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ROI CALCULATOR -->
+    <section id="calculator" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-brand-cardDark border border-purple-900/40 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand-lilac text-xs font-bold uppercase tracking-widest">Revenue Estimator</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Calculate Your Meta Ad Potential</h2>
+                    <p class="text-slate-400 text-sm mt-2">Adjust your projected monthly ad spend to see estimated returns based on our client performance benchmarks.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase text-slate-300">Monthly Ad Budget</label>
+                                <span id="budget-value" class="text-xl font-bold text-brand-lilac">$3,000</span>
+                            </div>
+                            <input type="range" id="budget-slider" min="1000" max="50000" step="1000" value="3000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-accent">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold uppercase text-slate-300 block mb-2">Target Industry</label>
+                            <select id="calc-industry" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-brand-accent">
+                                <option value="ecom">E-Commerce Brand (D2C)</option>
+                                <option value="realestate">Real Estate & Property Sales</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Output Box -->
+                    <div class="bg-black/50 border border-purple-500/20 rounded-2xl p-6 text-center space-y-4">
+                        <div>
+                            <span class="text-xs font-medium text-slate-400 uppercase">Estimated Monthly Return</span>
+                            <h3 id="calc-revenue" class="text-4xl font-black text-green-400 mt-1">$18,000</h3>
+                        </div>
+                        <div class="pt-4 border-t border-white/10 grid grid-cols-2 gap-2 text-left">
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">Est. ROAS / Leads</span>
+                                <span id="calc-metric-1" class="text-sm font-bold text-white">6.0x ROAS</span>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">Est. Net Profit Growth</span>
+                                <span id="calc-metric-2" class="text-sm font-bold text-brand-lilac">$15,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGH-CONVERTING LEAD GENERATION FORM -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-gradient-to-b from-brand-cardDark to-black border border-purple-500/30 rounded-3xl p-8 md:p-12 shadow-2xl">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand-lilac text-xs font-bold uppercase tracking-widest">Scale Your Business</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">Request Your Free Meta Ad Audit</h2>
+                    <p class="text-slate-400 text-sm mt-3">Fill out the form below. We will review your current marketing setup and send a custom growth plan directly to your inbox.</p>
+                </div>
+
+                <form id="lead-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Full Name *</label>
+                            <input type="text" id="lead-name" required placeholder="John Doe" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                            <input type="email" id="lead-email" required placeholder="john@company.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number / WhatsApp</label>
+                            <input type="tel" id="lead-phone" placeholder="+923362327095" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Business Type *</label>
+                            <select id="lead-industry" required class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
+                                <option value="" disabled selected>Select Industry</option>
+                                <option value="E-Commerce Brand">E-Commerce Brand</option>
+                                <option value="Real Estate Agency / Developer">Real Estate Agency / Developer</option>
+                                <option value="Local Service Business">Local Service Business</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Website / Instagram Page URL</label>
+                        <input type="url" id="lead-website" placeholder="https://yourbrand.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Current Monthly Ad Spend</label>
+                        <select id="lead-budget" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
+                            <option value="Not spending yet">Not spending yet</option>
+                            <option value="$1,000 - $3,000 / month">$1,000 - $3,000 / month</option>
+                            <option value="$3,000 - $10,000 / month">$3,000 - $10,000 / month</option>
+                            <option value="$10,000+ / month">$10,000+ / month</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-deepPurple via-purple-600 to-brand-accent hover:opacity-95 text-white font-bold text-base shadow-xl shadow-purple-950/50 transition-all flex items-center justify-center gap-2">
+                        <span>Send Audit Request</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-12 bg-black">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <a href="#" class="text-xl font-extrabold text-white">Pixel<span class="text-brand-lilac">Grow</span></a>
+                <p class="text-slate-500 text-xs mt-1">High-ROI Meta Advertising Agency for E-Commerce & Real Estate.</p>
+            </div>
+            <p class="text-slate-500 text-xs">&copy; 2026 PixelGrow Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL FOR CASE STUDY DETAILS -->
+    <div id="modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-brand-cardDark border border-purple-500/30 rounded-2xl p-6 md:p-8 max-w-lg w-full relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span id="modal-category" class="px-3 py-1 rounded-full bg-purple-900/40 text-brand-lilac text-xs font-semibold border border-purple-500/20">Category</span>
+            <h3 id="modal-title" class="text-2xl font-bold text-white mt-3">Project Title</h3>
+            <div class="grid grid-cols-2 gap-4 my-6 p-4 rounded-xl bg-black/50 border border-white/5">
+                <div>
+                    <span class="text-xs text-slate-400 block">Metric Output</span>
+                    <span id="modal-metric1" class="text-lg font-bold text-brand-lilac">0.0x</span>
+                </div>
+                <div>
+                    <span class="text-xs text-slate-400 block">Total Volume</span>
+                    <span id="modal-metric2" class="text-lg font-bold text-white">$0</span>
+                </div>
+            </div>
+            <h4 class="text-xs font-bold uppercase text-slate-400 mb-1">Execution Strategy:</h4>
+            <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed">Strategy detailed content goes here.</p>
+            <button onclick="closeModal()" class="mt-6 w-full py-3 rounded-xl bg-purple-900/30 border border-purple-500/30 text-white font-semibold text-sm hover:bg-purple-900/50 transition-all">Close Modal</button>
+        </div>
+    </div>
+
+    <!-- Custom JS Script -->
+    <script src="script.js"></script>
+    <!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/923362327095?text=Hi%20PixelGrow!%20I%20am%20interested%20in%20scaling%20my%20business%20with%20Meta%20Ads." 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="whatsapp-float group" 
+   aria-label="Chat on WhatsApp">
+    
+    <!-- Pulse animation ring -->
+    <span class="whatsapp-pulse"></span>
+    
+    <!-- WhatsApp Icon -->
+    <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+    
+    <!-- Tooltip Hover Text -->
+    <span class="whatsapp-tooltip">
+        Chat with us on WhatsApp
+    </span>
+</a>
+</body>
+</html>
