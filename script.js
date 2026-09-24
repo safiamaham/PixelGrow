@@ -2,13 +2,21 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Mobile Navigation Toggle
-    const menuBtn = document.getElementById('menu-btn');
+    // 1. Mobile Menu Toggle & Auto-Close on Click
+    const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto close mobile menu when a menu item or CTA button is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
     }
 
