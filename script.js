@@ -133,79 +133,45 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateROI(); // Initial calculation
     }
 
-    // 5. Lead Generation Form Submission (Integrate Email Receiver)
-    const leadForm = document.getElementById('lead-form');
-
-    if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('lead-name').value;
-            const email = document.getElementById('lead-email').value;
-            const phone = document.getElementById('lead-phone').value;
-            const industry = document.getElementById('lead-industry').value;
-            const website = document.getElementById('lead-website').value;
-            const budget = document.getElementById('lead-budget').value;
-
-
-
-            // 5. Lead Generation Form Submission
+// 5. Lead Generation Form Submission via Web3Forms
 const leadForm = document.getElementById('lead-form');
 
 if (leadForm) {
-    leadForm.addEventListener('submit', function(e) {
+    leadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const submitBtn = document.getElementById('submit-btn');
-        submitBtn.innerText = "Sending...";
+        const originalContent = submitBtn.innerHTML;
 
-        // Collect Form Data
-        const formData = {
-            // PASTE YOUR KEY INSIDE THE QUOTES BELOW 👇
-            access_key: "e347f322-9624-4d2e-b36d-b81bc45c7637", 
-            name: document.getElementById('lead-name').value,
-            email: document.getElementById('lead-email').value,
-            phone: document.getElementById('lead-phone').value,
-            industry: document.getElementById('lead-industry').value,
-            website: document.getElementById('lead-website').value,
-            budget: document.getElementById('lead-budget').value
-        };
-        // Send data directly to Web3Forms
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                alert("Thank you! Your request has been sent successfully. We will contact you soon.");
+        // Change button state during sending
+        submitBtn.innerHTML = "<span>Sending...</span>";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(leadForm);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your audit request has been sent. Check your Gmail inbox!");
                 leadForm.reset();
             } else {
-                alert("Submission failed: " + json.message);
+                alert("Error: " + data.message);
             }
-        })
-        .catch(error => {
-            alert("Something went wrong. Please try again.");
-        })
-        .finally(() => {
-            submitBtn.innerHTML = '<span>Send Audit Request</span> <i class="fa-solid fa-paper-plane text-xs"></i>';
-        });
+
+        } catch (error) {
+            alert("Something went wrong. Please check your connection and try again.");
+        } finally {
+            submitBtn.innerHTML = originalContent;
+            submitBtn.disabled = false;
+        }
     });
 }
-
-          
-
-            // Form Feedback
-            alert(`Thank you, ${name}! Your request has been submitted successfully.\nWe will reach out to ${email} shortly.`);
-            leadForm.reset();
-        });
-    }
-});
-
 // 6. Case Study Modal Functions
 function openModal(title, category, metric1, metric2, desc) {
     document.getElementById('modal-title').textContent = title;
@@ -220,3 +186,4 @@ function openModal(title, category, metric1, metric2, desc) {
 function closeModal() {
     document.getElementById('modal').classList.add('hidden');
 }
+});

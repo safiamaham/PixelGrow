@@ -424,25 +424,28 @@
                 </div>
 
                 <form id="lead-form" class="space-y-6">
+                    <!-- Web3Forms Hidden Access Key -->
+                    <input type="hidden" name="access_key" value="6b5abba0-0b39-4070-950c-aa8c49221e3d">
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Full Name *</label>
-                            <input type="text" id="lead-name" required placeholder="John Doe" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                            <input type="text" name="name" id="lead-name" required placeholder="John Doe" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
-                            <input type="email" id="lead-email" required placeholder="john@company.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                            <input type="email" name="email" id="lead-email" required placeholder="john@company.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number / WhatsApp</label>
-                            <input type="tel" id="lead-phone" placeholder="+923362327095" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                            <input type="tel" name="phone" id="lead-phone" placeholder="+923362327095" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Business Type *</label>
-                            <select id="lead-industry" required class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
+                            <select name="industry" id="lead-industry" required class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
                                 <option value="" disabled selected>Select Industry</option>
                                 <option value="E-Commerce Brand">E-Commerce Brand</option>
                                 <option value="Real Estate Agency / Developer">Real Estate Agency / Developer</option>
@@ -454,12 +457,12 @@
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Website / Instagram Page URL</label>
-                        <input type="url" id="lead-website" placeholder="https://yourbrand.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
+                        <input type="url" name="website" id="lead-website" placeholder="https://yourbrand.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-brand-accent transition-colors">
                     </div>
 
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Current Monthly Ad Spend</label>
-                        <select id="lead-budget" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
+                        <select name="budget" id="lead-budget" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-brand-accent transition-colors">
                             <option value="Not spending yet">Not spending yet</option>
                             <option value="$1,000 - $3,000 / month">$1,000 - $3,000 / month</option>
                             <option value="$3,000 - $10,000 / month">$3,000 - $10,000 / month</option>
@@ -472,6 +475,7 @@
                         <i class="fa-solid fa-paper-plane text-xs"></i>
                     </button>
                 </form>
+               
             </div>
         </div>
     </section>
